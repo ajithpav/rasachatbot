@@ -1,0 +1,498 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moinrsa
+    - hey there
+    - let's go
+    - hey dude
+
+- intent: subscriptions_tabular_data
+  examples: |
+    - Show me the tabular data of subscriptions.
+    - Provide the table for subscription details.
+    - What does the subscription table look like?
+    - Display the tabular data of subscriptions.
+
+
+- intent: churn_monthly_charge_graph
+  examples: |
+    - Show me the graphical view of churn and monthly charge.
+    - Provide a graph depicting churn and monthly charge.
+    - Display a graph showing the correlation between churn and monthly charge.
+    - What does the churn graph look like?
+
+
+
+
+- intent: phone
+  examples: |
+    - [7559854598](number)
+    - This is my phone number [2365894561](number)
+    - Here you go [9874562159]
+    - My phone number is [1234569870](number)
+
+- intent: gmailid
+  examples: |
+    - [abc@gmail.com](mailid)
+    - This is my mailid [abcd12@gmail.com](mailid)
+    - Here you go [9874562159]
+    - My phone number is [bala@gmail.com](mailid)
+
+
+
+
+- intent: repeat_phone
+  examples: |
+    - what is phone number
+    - Tell me my phone number
+    - repeat my phone number
+    - can you repeat my phone number
+
+
+
+
+
+- intent: express
+  examples: |
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: myself
+  examples: |
+    - who are you?
+
+- intent: cheer_up
+  examples: |
+    - Cheer me up
+    - I need some cheering up
+    - Can you make me feel better?
+    - Show me something cheerful
+    - I'm feeling down, help me out
+
+
+- intent: customer_serv_calls_churn_comparison
+  examples: |
+    - How does the number of customer service calls impact churn?
+    - Is there a correlation between CustServCalls and churn?
+    - What is the relationship between the frequency of customer service calls and customer churn?
+    - Do customers who make more customer service calls tend to churn more often?
+    - Can the number of calls to customer service predict churn rates?
+    - Is there a noticeable trend in churn based on CustServCalls?
+    - How do customers with different CustServCalls behave in terms of churn?
+    - What is the average number of customer service calls for customers who churn?
+    - Are there any patterns in churn based on the variability in CustServCalls?
+    - Does the frequency of customer service calls have a significant impact on customer loyalty?
+    - Are there outliers in CustServCalls that are related to higher churn rates?
+    - Can we identify a threshold for CustServCalls that indicates a higher likelihood of churn?
+    - How does the distribution of CustServCalls differ between churned and active customers?
+    - What percentage of customers who made a specific number of calls to customer service ended up churning?
+    - How do different customer segments, based on CustServCalls, contribute to overall churn?
+    - Are there specific issues or reasons behind customer service calls that lead to higher churn?
+    - Is there a seasonal or time-based pattern in customer service calls affecting churn rates?
+    - How does the duration of customer service calls relate to the likelihood of churn?
+    - What preventive measures can be taken to reduce churn based on CustServCalls analysis?
+    - Are there any clusters of customers with similar CustServCalls patterns that exhibit distinct churn behavior?
+    - Can we identify a trend in churn based on changes in the number of customer service calls over time?
+    - How does the geographical location of customers influence the relationship between CustServCalls and churn?
+    - What is the impact of different products or services on the relationship between CustServCalls and churn?
+    - Are there any specific customer demographics that show a stronger correlation between CustServCalls and churn?
+    - How does the type of customer service issue affect the likelihood of churn?
+    - What role does the satisfaction level of customers play in the connection between CustServCalls and churn?
+    - Does the sentiment expressed during customer service calls provide insights into potential churn?
+    - Are there differences in churn rates based on the time of day when customer service calls are made?
+    - What is the average resolution time for issues raised in customer service calls for churned customers?
+    - How do different communication channels for customer service impact the relationship with churn?
+    - Can the length of time between customer service calls be a predictor of churn?
+    - what is the impact of marketing efforts on mitigating churn for customers with high CustServCalls?
+    - How do changes in CustServCalls align with changes in customer satisfaction and churn rates?
+    - Can machine learning models accurately predict churn based on historical CustServCalls data?
+    - What is the influence of promotional offers or discounts on the relationship between CustServCalls and churn?
+    - How do customers with consistently high CustServCalls differ from those with occasional spikes in calls in terms of churn?
+    - Are there specific customer journeys that involve customer service calls leading to increased churn?
+    - How do customers' historical interactions with customer service contribute to their current churn status?
+    - Can we identify a pattern in the timing of customer service calls that precede churn events?
+    - How does the level of urgency or severity of customer service issues impact the likelihood of churn?
+    - Are there certain industries or sectors that show a stronger connection between CustServCalls and churn?
+    - How does the accessibility of self-service options affect the relationship between CustServCalls and churn?
+    - What is the impact of different customer service representatives on customer churn rates?
+    - How do changes in CustServCalls align with broader market trends or economic factors affecting churn?
+    - Are there specific touchpoints in the customer journey where CustServCalls have a more significant impact on churn?
+    - How does the frequency of customer service interactions vary across different customer segments, and how does this relate to churn?
+    - Can customer feedback from service calls be used to proactively address issues and reduce churn?
+    - How does the effectiveness of problem resolution during customer service calls correlate with churn rates?
+    - Are there patterns in the timing of customer service calls that indicate customer dissatisfaction and potential churn?
+    - How do external events or crises impact the relationship between CustServCalls and churn?
+    - Can proactive outreach based on CustServCalls history prevent customers from churning?
+    - What role does customer education and awareness play in reducing CustServCalls and mitigating churn?
+    - Are there differences in CustServCalls patterns between long-term and short-term customers in relation to churn?
+    - How do changes in CustServCalls align with shifts in customer preferences and expectations impacting churn?
+    - Can personalized communication strategies based on CustServCalls history improve customer retention?
+    - How do variations in CustServCalls relate to changes in customer sentiment and emotional engagement?
+    - What is the impact of competition and market dynamics on the relationship between CustServCalls and churn?
+    - Can customer feedback provided during service calls be used to identify potential churn risks?
+    - How do changes in CustServCalls align with changes in customer spending behavior and overall value?
+    - Are there specific customer personas with distinct CustServCalls patterns that are more prone to churn?
+    - Can machine learning algorithms identify hidden patterns or anomalies in CustServCalls data indicative of potential churn?
+    - How does the introduction of new products or features influence the connection between CustServCalls and churn?
+    - What proactive measures can be taken to address common issues leading to customer service calls and subsequent churn?
+    - Are there differences in CustServCalls patterns between customers acquired through various marketing channels in terms of churn?
+    - How does the frequency of customer service calls impact the likelihood of customers becoming advocates despite churn?
+    - Can targeted customer service training for representatives handling high CustServCalls improve customer satisfaction and reduce churn?
+    - What is the impact of seasonal fluctuations in customer service call volumes on churn rates?
+    - How do variations in CustServCalls relate to changes in customer loyalty programs and incentives influencing churn?
+  
+
+- intent: monthly_charge_impact
+  examples: |
+    - Is there a correlation between the average monthly bill and customer churn rates?
+    - Have you observed any patterns indicating how the MonthlyCharge affects the likelihood of churn?
+    - What is the impact of the average monthly bill on customer churn within your dataset?
+    - Can you provide insights into whether higher MonthlyCharge values are associated with increased churn rates?
+    - Are there specific thresholds or ranges of MonthlyCharge that correspond to notable changes in churn rates?
+    - How do variations in the MonthlyCharge influence customer churn behavior?
+    - Have you conducted a segmentation analysis based on MonthlyCharge to understand its impact on churn?
+    - Is there a statistically significant relationship between the level of MonthlyCharge and customer churn?
+    - Can you identify any trends suggesting that lower MonthlyCharge values lead to higher churn rates?
+    - Have you explored the customer perception of value in relation to their MonthlyCharge and its impact on churn?
+    - Are there customer segments for whom the MonthlyCharge has a more pronounced effect on churn rates?
+    - What strategies are in place to mitigate churn among customers experiencing higher MonthlyCharge?
+    - Can you provide insights into the customer satisfaction levels based on their MonthlyCharge and its impact on churn?
+    - Is there a noticeable difference in churn rates between customers with increasing and decreasing MonthlyCharge trends?
+    - Have you conducted customer surveys to understand their sentiment regarding MonthlyCharge and its influence on churn?
+    - How do promotional offers or discounts tied to MonthlyCharge impact customer retention rates?
+    - Is there an optimal range of MonthlyCharge that minimizes churn rates among your customer base?
+    - Have you explored whether customers perceive the MonthlyCharge as fair or reasonable in relation to your services?
+    - Are there specific product or service features tied to MonthlyCharge that affect customer churn rates?
+    - Can you identify any external factors, such as market trends, impacting the relationship between MonthlyCharge and churn?
+    - How do changes in the pricing structure or adjustments to MonthlyCharge impact churn rates?
+    - Have you considered the role of customer education in mitigating churn related to perceptions of MonthlyCharge?
+    - Are there differences in the impact of MonthlyCharge on churn between new and long-term customers?
+    - Can you provide insights into the competitive landscape and its influence on churn rates based on MonthlyCharge?
+    - How does the duration of the customer relationship impact the sensitivity of churn to changes in MonthlyCharge?
+    - Are there instances where customers with higher MonthlyCharge values exhibit lower churn rates, and vice versa?
+    - Have you conducted A/B testing or experiments to understand the causal relationship between MonthlyCharge adjustments and churn?
+    - Is there a seasonality effect in the relationship between MonthlyCharge and churn rates?
+    - Can you identify any specific customer behaviors or usage patterns associated with changes in MonthlyCharge and churn?
+    - How do changes in economic conditions or customer financial situations impact the sensitivity of churn to MonthlyCharge?
+    - Are there demographic variations in the impact of MonthlyCharge on churn rates among different customer segments?
+    - How does the level of transparency in communicating changes to MonthlyCharge impact customer trust and churn rates?
+    - Have you explored whether customers perceive the MonthlyCharge as a significant factor in their decision to churn?
+    - What role does customer support or service play in mitigating churn related to concerns about MonthlyCharge?
+    - Can you provide insights into whether customers with fluctuating MonthlyCharge values exhibit distinct churn patterns?
+    - How do changes in the competitive landscape influence the impact of MonthlyCharge on customer churn?
+    - Are there industry benchmarks or standards that can be used to evaluate the competitiveness of your MonthlyCharge?
+    - Can you identify any regional variations in the impact of MonthlyCharge on churn rates?
+    - How does the perceived value of services impact the sensitivity of churn to changes in MonthlyCharge?
+    - Have you considered offering customizable plans or options to address different customer preferences related to MonthlyCharge?
+    - Are there specific communication channels that are more effective in conveying the value of MonthlyCharge to customers and reducing churn?
+    - How does the overall economic environment influence the perceived value of services in relation to MonthlyCharge and its impact on churn?
+    - Have you explored whether there are differences in churn rates based on the billing cycle associated with MonthlyCharge?
+    - Can you provide insights into customer expectations regarding service quality in relation to their MonthlyCharge and its impact on churn?
+    - How does the inclusion of additional services or features in the MonthlyCharge impact overall churn rates?
+    - Have you conducted customer interviews to understand the emotional aspects tied to MonthlyCharge and its effect on churn decisions?
+    - Are there instances where customers willingly accept higher MonthlyCharge for added services, leading to lower churn rates?
+    - Can you identify any challenges or pain points in the customer journey related to MonthlyCharge that may contribute to churn?
+    - How do changes in market trends or industry standards impact the perceived value of MonthlyCharge and its relationship with churn?
+    - Have you considered leveraging customer feedback and sentiment analysis to understand perceptions of MonthlyCharge and its impact on churn?
+
+- intent: data_plan_churn_comparison
+  examples: |
+    - Is there a discernible correlation between the presence of data plans and customer churn rates?
+    - Have you observed any patterns indicating that customers with data plans are less likely to churn?
+    - How does the availability of data plans influence customer retention and churn within your dataset?
+    - Can you provide insights into whether customers without data plans exhibit higher churn rates?
+    - Are there specific thresholds or usage patterns of data plans associated with notable changes in churn rates?
+    - How do variations in the type or size of data plans impact customer churn behavior?
+    - Have you conducted a segmentation analysis based on the presence or absence of data plans to understand its impact on churn?
+    - Is there a statistically significant relationship between the availability of data plans and customer churn?
+    - Can you identify any trends suggesting that customers without data plans are more likely to churn?
+    - How does the inclusion of data plans in your service offerings affect overall customer churn rates?
+    - Are there customer segments for whom the absence of data plans has a more pronounced effect on churn rates?
+    - What strategies are in place to mitigate churn among customers without data plans?
+    - Can you provide insights into the customer satisfaction levels based on the presence or absence of data plans and its impact on churn?
+    - Is there a noticeable difference in churn rates between customers with and without data plans?
+    - Have you conducted customer surveys to understand their sentiment regarding the availability of data plans and its influence on churn?
+    - How do promotional offers or discounts tied to data plans impact customer retention rates?
+    - Is there an optimal combination of data plan features that minimizes churn rates among your customer base?
+    - Have you explored whether customers perceive the absence of data plans as a factor leading to higher churn rates?
+    - Are there specific product or service features tied to data plans that affect customer churn rates?
+    - Can you identify any external factors, such as market trends, impacting the relationship between data plans and churn?
+    - How do changes in the pricing structure or adjustments to data plans impact churn rates?
+    - Have you considered the role of customer education in mitigating churn related to the absence of data plans?
+    - Are there differences in the impact of data plans on churn between new and long-term customers?
+    - Can you provide insights into the competitive landscape and its influence on churn rates based on the presence or absence of data plans?
+    - How does the duration of the customer relationship impact the sensitivity of churn to the availability of data plans?
+    - Are there instances where customers without data plans exhibit higher satisfaction and lower churn rates, and vice versa?
+    - Have you conducted A/B testing or experiments to understand the causal relationship between data plan availability and churn?
+    - Is there a seasonality effect in the relationship between data plan availability and churn rates?
+    - Can you identify any specific customer behaviors or usage patterns associated with the availability or absence of data plans and churn?
+    - How do changes in economic conditions or customer financial situations impact the sensitivity of churn to the availability of data plans?
+    - Are there demographic variations in the impact of data plan availability on churn rates among different customer segments?
+    - How does the level of transparency in communicating the benefits of data plans impact customer trust and churn rates?
+    - Have you explored whether customers perceive the absence of data plans as a significant factor in their decision to churn?
+    - What role does customer support or service play in mitigating churn related to concerns about the absence of data plans?
+    - Can you provide insights into whether customers without data plans exhibit distinct churn patterns?
+    - How do changes in the competitive landscape influence the impact of data plans on customer churn?
+    - Are there industry benchmarks or standards that can be used to evaluate the impact of data plans on churn?
+    - Can you identify any regional variations in the impact of data plan availability on churn rates?
+    - How does the perceived value of services impact the sensitivity of churn to the availability of data plans?
+    - Have you considered offering customizable plans or options to address different customer preferences related to data plans?
+    - Are there specific communication channels that are more effective in conveying the value of data plans to customers and reducing churn?
+    - How does the overall economic environment influence the perceived value of services in relation to data plan availability and its impact on churn?
+    - Have you explored whether there are differences in churn rates based on the billing cycle associated with data plan availability?
+    - Can you provide insights into customer expectations regarding service quality in relation to the availability of data plans and its impact on churn?
+    - How does the inclusion of additional services or features in data plans impact overall churn rates?
+    - Have you conducted customer interviews to understand the emotional aspects tied to the availability or absence of data plans and its effect on churn decisions?
+    - Are there instances where customers willingly accept not having data plans, leading to lower churn rates?
+    - Can you identify any challenges or pain points in the customer journey related to the absence of data plans that may contribute to churn?
+    - How do changes in market trends or industry standards impact the perceived value of data plans and its relationship with churn?
+    - Have you considered leveraging customer feedback and sentiment analysis to understand perceptions of data plan availability and its impact on churn?
+    
+- intent: contract_renewal_churn_comparison
+  examples: |
+    - What is the average churn rate for customers who recently renewed their ContractRenewal?
+    - Are there noticeable differences in churn rates between customers who renewed and those who didn't?
+    - How does the churn rate vary across different contract renewal periods?
+    - Can we identify any patterns in customer behavior leading to lower churn rates after contract renewal?
+    - Do customers who renewed their contracts tend to stay with us for a longer duration?
+    - Are there specific product or service features that influence customer retention post-contract renewal?
+    - What is the percentage of customers who renew their contracts and still churn within the first month?
+    - Is there a correlation between the length of the renewed contract and subsequent churn rates?
+    - How do customer satisfaction scores differ between those who renewed and those who didn't?
+    - What are the main reasons cited by customers for not renewing their contracts despite being offered ContractRenewal?
+    - Can we identify any demographic factors that contribute to lower churn rates after contract renewal?
+    - How does customer engagement change after the renewal of a contract?
+    - Are there specific marketing or promotional strategies that positively impact post-renewal churn rates?
+    - Do customers who engage with customer support post-renewal exhibit different churn patterns?
+    - Is there a significant difference in churn rates between different industries or sectors post-contract renewal?
+    - How does the timing of contract renewal notifications impact subsequent churn rates?
+    - Can we identify any specific geographic regions where post-renewal churn rates are consistently lower?
+    - What role does the quality of communication play in reducing churn rates for renewed contracts?
+    - Are there any notable differences in the types of products or services that contribute to lower churn post-renewal?
+    - How does the average revenue per user (ARPU) change for customers who recently renewed their contracts?
+    - Are there any seasonal trends or patterns in post-renewal churn rates?
+    - What role does customer loyalty programs play in retaining customers after contract renewal?
+    - Do customers who engage with our loyalty programs exhibit lower churn rates?
+    - How does the competitive landscape impact churn rates for renewed contracts?
+    - Can we identify any specific touchpoints in the customer journey that influence post-renewal churn?
+    - How do contract renewal incentives affect customer churn rates?
+    - Are there differences in post-renewal churn rates between B2B and B2C customers?
+    - What impact does the ease of the renewal process have on subsequent churn rates?
+    - How does the frequency of customer interactions influence post-renewal churn rates?
+    - Are there any trends in customer feedback or reviews that correlate with lower post-renewal churn?
+    - Can we identify any patterns in the usage of our products or services that contribute to lower churn post-renewal?
+    - What role do personalized offers play in retaining customers after contract renewal?
+    - How do different contract renewal channels (online, in-person, phone) impact post-renewal churn?
+    - Are there any differences in post-renewal churn rates based on the size of the customer's business (for B2B)?
+    - How does the reputation of our brand influence post-renewal churn rates?
+    - Are there any differences in post-renewal churn rates based on the length of the initial contract term?
+    - How do changes in market conditions or economic factors impact post-renewal churn rates?
+    - Can we identify any trends in customer behavior leading up to the contract renewal decision?
+    - How does the level of customer education about our products or services impact post-renewal churn?
+    - Are there differences in post-renewal churn rates between different customer segments?
+    - How does the availability of alternative solutions in the market impact post-renewal churn rates?
+    - Are there differences in post-renewal churn rates between different pricing tiers or plans?
+    - How does the level of customer satisfaction with the renewal process correlate with lower churn rates?
+    - Can we identify any patterns in customer feedback or complaints that are associated with higher post-renewal churn rates?
+    - How does the timing of follow-up communication after contract renewal impact subsequent churn rates?
+    - Are there differences in post-renewal churn rates between customers acquired through different channels?
+    - What is the impact of customer onboarding processes on post-renewal churn rates?
+    - Can we identify any external factors (e.g., regulatory changes) that influence post-renewal churn rates?
+    - How does the frequency of communication between the customer and our sales team impact post-renewal churn?
+    - Are there differences in post-renewal churn rates between customers who utilize different payment methods?
+
+- intent: correlation_cust_serv_calls_churn
+  examples: |
+    - What is the relationship between customer service calls and churn?
+    - What is the correlation between each feature and churn?
+    - Tell me about the relationship between CustServCalls and churn.
+    - Is there a correlation between the number of calls to customer service and churn?
+    - How strong is the correlation between CustServCalls and churn in the dataset?
+    - Are there specific scenarios where an increase in customer service calls leads to reduced churn?
+    - What actions can be taken based on the observed correlation between customer service calls and churn?
+
+
+- intent: ask_for_churn_chart_image
+  examples: |
+    - Show me the  static churn chart.
+    - Can I see static the churn chart?
+    - Provide the  staic churn chart image.
+    - Display the static chart related to churn.
+    - Share the staic image of the churn chart.
+    - Show me some static the churn chart
+    - privide some static churn chat image
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - have a nice day
+    - see you around
+    - bye bye
+
+- intent: plans
+  examples: |
+    - what plans are there?
+    - plan details?
+    - airtel plans
+    - Need some detail about airtel plan
+
+- intent: prepaid
+  examples: |
+    - Tell me about prepaid  plans.
+    - Need some prepaid plan details.
+    - Explain prepaid  offerings.
+    - Details on Airtel prepaid  plans.
+
+- intent: postpaid
+  examples: |
+    - Tell me about postpaid  plans.
+    - Need some postpaid plan details.
+    - Explain postpaid  offerings.
+    - Details on Airtel postpaid  plans.
+    - Different between prepaid and postpaid.
+
+
+- intent: airtel_thanks_program
+  examples: |
+    - What is Airtel Thanks Program?
+    - Tell me about Airtel Thanks Program.
+    - Explain Airtel Thanks rewards.
+    - Give me details about the Airtel Thanks rewards program.
+
+- intent: eligibility_airtel_thanks
+  examples: |
+    - Am I eligible for Airtel Thanks benefits?
+    - Who can join Airtel Thanks?
+    - Airtel Thanks eligibility criteria.
+    - What are the requirements to be eligible for Airtel Thanks?
+    - Can I get Airtel Thanks benefits with a corporate connection?
+    - Is there a minimum recharge amount for Airtel Thanks eligibility?
+    
+
+- intent: airtel_payment_bank_offer
+  examples: |
+    - What is the Airtel Payment Bank Rs.51 offer with Airtel Thanks?
+    - Tell me about the Airtel Payment Bank offer.
+    - How do I avail the Airtel Payment Bank offer under Airtel Thanks?
+
+- intent: non_airtel_customer_eligibility
+  examples: |
+    - How can I get access to Airtel Thanks benefits if I'm not an Airtel customer?
+    - Join Airtel Thanks as a non-Airtel customer.
+    - Access Airtel Thanks without being an Airtel customer.
+    - As a non-Airtel customer, how can I access Airtel Thanks offers?
+    - Can I join Airtel Thanks if I'm not an existing Airtel subscriber?
+
+- intent: rewards_claim_process
+  examples: |
+    - How can I claim Airtel Thanks benefits?
+    - What is the process to claim Airtel Thanks rewards?
+    - Claiming Airtel Thanks perks.
+    - Where do I go to redeem my Airtel Thanks rewards?
+    - Steps to claim benefits from the Airtel Thanks program?
+
+- intent: plan_upgrade_downgrade
+  examples: |
+    - Will Airtel Thanks benefits change when I upgrade/downgrade my plan or recharge pack?
+    - Impact of plan change on Airtel Thanks benefits.
+    - Changing plan and Airtel Thanks benefits.
+    - If I change to a higher/lower Airtel plan, how will it impact my Thanks benefits?
+    - What happens to my accumulated Airtel Thanks rewards when I upgrade/downgrade plan?
+
+- intent: airtel_broadband_no_sim
+  examples: |
+    - I have an Airtel broadband connection, but do not have an Airtel SIM. Can I still get Airtel Thanks benefits?
+    - Access Airtel Thanks with only a broadband connection.
+    - I only have an Airtel broadband connection, no mobile SIM. Am I still eligible for Thanks?
+    - Can I get Airtel Thanks rewards by just having an Airtel broadband plan?
+  
+
+- intent: airtel_thanks_expire_rewards
+  examples: |
+    - If I don’t claim my rewards, will they expire even if I don’t change my plan?
+    - Expiry of Airtel Thanks rewards.
+    - Do unclaimed Airtel Thanks rewards carry over to the next billing cycle?
+    - there an expiration period for my Airtel Thanks earned rewards?
+
+- intent: amazon_prime_offer
+  examples: |
+    - What is the Amazon Prime offer with Airtel Thanks?
+    - Details of Amazon Prime membership with Airtel Thanks.
+
+- intent: check_balance
+  examples: |
+    - what's my current balance?
+    - can you tell me how much balance I have?
+    - check my remaining balance
+    - balance inquiry
+
+- intent: check_data_plan
+  examples: |
+    - What data plan am I subscribed to?
+    - Can you tell me about my current data plan?
+    - I want to know the details of my data package.
+
+- intent: check_bill
+  examples: |
+    - How much is my bill this month?
+    - Can you show me my latest bill?
+    - What was the amount of my previous bill?
+
+- intent: information
+  examples: |
+    - i need some information
+    - can you provide me with information?
+    - tell me more information
+    - I'm looking for details
+    - provide some info
+    - share some details
+    - I'd like to know more
+    - give me information on that
+    - could you give me more details?
+
+
+- intent: confused
+  examples: |
+    - a
+    - b
+    - c
+    - d
+    - e
+    - f
+    - g
+    - h
+    - i
+    - j
+    - k
+    - l
+    - m
+    - n
+    - o
+    - p
+    - q
+    - r
+    - s
+    - t
+    - u
+    - v
+    - w
+    - x
+    - y
+    - z
+
+
+
+  
+

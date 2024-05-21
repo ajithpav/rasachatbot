@@ -1,0 +1,188 @@
+version: "3.1"
+
+stories:
+
+- story: custom actions
+  steps:
+  - intent: subscriptions_tabular_data
+  - action: Subscriptions_Tabular_Data_View
+  - intent: churn_monthly_charge_graph
+  - action: churn_monthly_charge_graph_View
+
+
+- story: happy path
+  steps:
+  - intent: information
+  - action: utter_information
+
+- story: ask about your self
+  steps:
+  - intent: myself
+  - action: utter_chatesponse
+
+- story: express path
+  steps:
+  - intent: express
+  - action: utter_express
+
+- story: User needs cheering up
+  steps:
+  - intent: cheer_up
+  - action: utter_cheer_up
+
+
+- story: Show Churn Chart
+  steps:
+  - intent: ask_for_churn_chart_image
+  - action: utter_churn_chart
+
+
+- story: user ask some details about information
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: user ask some Data Plan Churn Comparison Story
+  steps:
+    - intent: data_plan_churn_comparison
+    - action: action_data_plan_churn_comparison
+
+
+- story: user ask some Monthly Charge Impact Story
+  steps:
+    - intent: monthly_charge_impact
+    - action: action_monthly_charge_impact
+
+
+- story: user ask some Contract Renewal Churn Comparison Story
+  steps:
+    - intent: contract_renewal_churn_comparison
+    - action: action_contract_renewal_churn_comparison
+
+  
+- story: user ask bye 
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user asks some detail about prepaid
+  steps:
+  - intent: prepaid
+  - action: utter_prepaid
+
+- story: user asks some detail about postpaid
+  steps:
+  - intent: postpaid
+  - action: utter_postpaid
+
+- story: User asks about Airtel Thanks Program
+  steps:
+  - intent: airtel_thanks_program
+  - action: utter_airtel_thanks_program
+
+- story: User inquires about Airtel Thanks eligibility
+  steps:
+  - intent: eligibility_airtel_thanks
+  - action: utter_eligibility_airtel_thanks
+
+- story: User asks about Airtel Payment Bank offer
+  steps:
+  - intent: airtel_payment_bank_offer
+  - action: utter_airtel_payment_bank_offer
+
+
+- story: Non-Airtel customer wants to access Airtel Thanks benefits
+  steps:
+  - intent: non_airtel_customer_eligibility
+  - action: utter_non_airtel_customer_eligibility
+
+- story: User asks about the process to claim Airtel Thanks rewards
+  steps:
+  - intent: rewards_claim_process
+  - action: utter_rewards_claim_process
+
+- story: User wants to know about Airtel Thanks benefits after plan upgrade/downgrade
+  steps:
+  - intent: plan_upgrade_downgrade
+  - action: utter_plan_upgrade_downgrade
+
+- story: Airtel broadband user without SIM wants Airtel Thanks benefits
+  steps:
+  - intent: airtel_broadband_no_sim
+  - action: utter_airtel_broadband_no_sim
+
+- story: User asks about the expiry of Airtel Thanks rewards
+  steps:
+  - intent: airtel_thanks_expire_rewards
+  - action: utter_airtel_thanks_expire_rewards
+
+- story: User inquires about the Amazon Prime offer with Airtel Thanks
+  steps:
+  - intent: amazon_prime_offer
+  - action: utter_amazon_prime_offer
+
+- story: user asks some confused questions
+  steps:
+  - intent: confused
+  - action: utter_confused
+
+- story: check_data_plan
+  steps:
+  - intent: check_data_plan
+  - action: utter_check_data_plan
+
+- story: check_bill
+  steps:
+  - intent: check_bill
+  - action: utter_check_bill
+
+
+
+
+  
+
+- story: Balanse check
+  steps:
+  - intent: check_balance
+  - action: utter_ask_mailid
+  - intent: gmailid
+    entities:
+    - mailid: abcdef@gmail.com
+  - slot_was_set:
+    - gmailid: sivan23@gmial.com
+  - action: action_say_mailid
+
+
+
+
+- story: user ask some plans
+  steps:
+  - intent: plans
+  - action: utter_ask_phone
+  - intent: phone
+    entities:
+    - number: 7896541230
+  - slot_was_set:
+    - phone: 9874561230
+  - action: action_say_phone
+
+
+
+
+
+
+- story: Contract renewal churn comparison
+  steps:
+  - intent: contract_renewal_churn_comparison
+  - action: action_contract_renewal_churn_comparison
+
+- story: Correlation CustServCalls churn
+  steps:
+  - intent: correlation_cust_serv_calls_churn
+  - action: action_correlation_CustServCalls_churn
+
+- story: Customer service calls churn comparison
+  steps:
+  - intent: customer_serv_calls_churn_comparison
+  - action: action_customer_serv_calls_churn_comparison

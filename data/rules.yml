@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Trigger Subscriptions_Tabular_Data_View custom action
+  steps:
+  - intent: subscriptions_tabular_data
+  - action: Subscriptions_Tabular_Data_View
+
+- rule: Trigger churn_monthly_charge_graph_View custom action
+  steps:
+  - intent: churn_monthly_charge_graph
+  - action: churn_monthly_charge_graph_View
+
+
+- rule: Respond to Airtel Thanks Program question
+  steps:
+  - intent: airtel_thanks_program
+  - action: utter_airtel_thanks_program
+
+- rule: Respond to Airtel Thanks eligibility question
+  steps:
+  - intent: eligibility_airtel_thanks
+  - action: utter_eligibility_airtel_thanks
+
+- rule: Respond to Airtel Payment Bank offer question
+  steps:
+  - intent: airtel_payment_bank_offer
+  - action: utter_airtel_payment_bank_offer
+
+
+- rule: Respond to customer_serv_calls_churn_comparison
+  steps:
+  - intent: customer_serv_calls_churn_comparison
+  - action: action_customer_serv_calls_churn_comparison
+
+- rule: Respond to data_plan_churn_comparison
+  steps:
+  - intent: data_plan_churn_comparison
+  - action: action_data_plan_churn_comparison
+
+- rule: Respond to contract_renewal_churn_comparison
+  steps:
+  - intent: contract_renewal_churn_comparison
+  - action: action_contract_renewal_churn_comparison

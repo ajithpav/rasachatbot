@@ -1,0 +1,168 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - plans
+  - prepaid
+  - postpaid
+  - information
+  - airtel_thanks_program
+  - eligibility_airtel_thanks
+  - airtel_payment_bank_offer
+  - non_airtel_customer_eligibility
+  - rewards_claim_process
+  - plan_upgrade_downgrade
+  - airtel_broadband_no_sim
+  - airtel_thanks_expire_rewards
+  - amazon_prime_offer
+  - check_balance
+  - check_data_plan
+  - confused
+  - check_bill
+  - monthly_charge_impact
+  - data_plan_churn_comparison
+  - customer_serv_calls_churn_comparison
+  - contract_renewal_churn_comparison
+  - correlation_cust_serv_calls_churn
+  - ask_for_churn_chart_image
+  - express
+  - cheer_up
+  - subscriptions_tabular_data
+  - churn_monthly_charge_graph
+  - myself
+  - phone
+  - repeat_phone
+  - gmailid
+  - addmail
+ 
+
+actions:
+  - action_monthly_charge_impact
+  - action_data_plan_churn_comparison
+  - action_customer_serv_calls_churn_comparison
+  - action_contract_renewal_churn_comparison
+  - action_correlation_CustServCalls_churn
+  - Subscriptions_Tabular_Data_View
+  - churn_monthly_charge_graph_View
+  - action_say_phone
+  - action_say_mailid
+
+
+entities:
+  - number
+  - mailid
+
+
+
+
+slots:
+  phone:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number
+
+  gmailid:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: mailid
+    
+
+
+
+
+
+
+responses:
+  utter_churn_chart:
+  - text: "Sure, here is a  staic churn chart for your reference."
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+  utter_cheer_up:
+  - text: "Cheer up! Here's a little something to brighten your day:"
+    image: "https://plus.unsplash.com/premium_photo-1674489620667-eaf4a0094996?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+
+  utter_information:
+  - text: "I have some interesting details about churn. Churn refers to the rate at which customers stop doing business with a company. It's a crucial metric that can impact a business's revenue and customer satisfaction. Feel free to ask for specific details about topics like monthly charge impact, data plan churn comparison, customer service calls churn comparison, contract renewal churn comparison, correlation between customer service calls and churn, or any other related questions!"
+
+  utter_express:
+  - text: "Thanks for asking,How can i help you?"
+
+  utter_chatesponse:
+  - text: "I'm your friendly assistent chatBot."
+
+
+  utter_ask_phone:
+  - text: "Can i get your phone number please ?"
+
+
+  utter_ask_mailid:
+  - text: "Can i get your mailid please ?"
+
+  
+
+  
+  utter_greet:
+  - text: "Hey! How can i help you?"
+
+  utter_goodbye:
+  - text: "If you have more questions, feel free to ask."
+  utter_prepaid:
+  - text: "Airtel offers a variety of prepaid plans with flexible recharge options. You can choose the amount that suits your needs. Would you like more details on prepaid plans?"
+
+  utter_postpaid:
+  - text: "Airtel's postpaid plans provide a fixed monthly billing cycle with additional benefits. Interested in learning more about postpaid plans?"
+
+  utter_airtel_thanks_program:
+  - text: "Airtel Thanks is an exclusive rewards program for valued Airtel customers providing a host of exclusive rewards, perks & privileges. To claim your rewards, download Airtel Thanks app from the play store or app store."
+  
+  utter_eligibility_airtel_thanks:
+  - text: "Airtel Thanks is available for select customers. Postpaid, Prepaid, and Broadband customers meeting certain criteria are eligible. For details, visit the Airtel Thanks app."
+
+  utter_airtel_payment_bank_offer:
+  - text: "Airtel Thanks customers without an existing Airtel Payments Bank account get an instant credit of Rs. 51 when they sign up for Airtel Money wallet or Airtel Payment Bank account."
+  
+  utter_non_airtel_customer_eligibility:
+  - text: "To join the Airtel Thanks program, you must become an Airtel prepaid/postpaid or broadband customer. To switch to Airtel, please visit your nearest Airtel Store."
+
+  utter_rewards_claim_process:
+  - text: "Claiming Airtel Thanks rewards is very simple. Just download Airtel Thanks App or upgrade to the latest version and click on the Airtel Thanks banner. Here you will get all information of the eligible rewards and you can directly claim them from here."
+
+  utter_plan_upgrade_downgrade:
+  - text: "Airtel Thanks benefits are dependent on the bill plan/recharge value. In case of an upgrade or downgrade, depending on the plan value, your Airtel Thanks benefits may get revised within 4 hours of change. You can view & claim the same on Airtel Thanks App."
+
+  utter_airtel_broadband_no_sim:
+  - text: "Of course. You can view and claim your Airtel Thanks rewards by logging on to Airtel Thanks App with your registered mobile number."
+
+  utter_airtel_thanks_expire_rewards:
+  - text: "All Airtel Thanks rewards are available on the app only for a certain time period. Once the reward has been claimed, you can enjoy the reward till the end of the validity of that particular reward. Hence, it is advisable to claim the rewards as soon as possible."
+
+  utter_amazon_prime_offer:
+  - text: "With Airtel Thanks, customers get access to Amazon Prime for no extra cost. The details of the offers would vary as per plan mentioned below – Postpaid: You get access to Amazon Prime for 1 year on plans of Rs 499 or above. Prepaid: You get access to Amazon Prime on recharging with a Rs 349 pack for the 28-day validity of the pack. Broadband: You get access to Amazon Prime for 1 year on plans of Rs 1099 or above."
+
+  utter_confused:
+  - text: "I'm sorry, I didn't understand. Can you please provide more information?"
+
+  utter_check_balance:
+  - text: "Sure, I can help you with that! To check your account balance, please wait"
+
+  utter_check_data_plan:
+  - text: "Sure, I can help you with that. Could you please provide me with your account information or phone number so I can access your data plan details?"
+  
+  utter_check_bill:
+  - text: "Your current month's bill amount, latest bill details, and previous bill amount can be retrieved by texting 'BILL' to 12345 or by logging into your online account."
+  
+  utter_plans:
+  - text: "Sure, here are the details about our plans: [Prepaid plans & postpaid plans]"
+
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
